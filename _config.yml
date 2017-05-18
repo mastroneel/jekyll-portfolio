@@ -1,0 +1,14 @@
+# Site Settings
+title: Portfolio
+email: laurenmastroni@gmail.com
+description: >
+  Portfolio site built using Jekyll
+baseurl: ""
+url: ""
+github_username:  mastroneel
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
