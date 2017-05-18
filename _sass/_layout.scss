@@ -114,6 +114,7 @@ footer {
 // NAV
 // ***
 
+// Navigation Variables
 $content-width: 1000px;
 $breakpoint: 800px;
 $nav-height: 70px;
@@ -121,6 +122,34 @@ $nav-background: #262626;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
 
+// Outer navigation wrapper
+.navigation {
+  height: $nav-height;
+  background: $nav-background;
+}
+
+// Logo and branding
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+// Navigation
 nav {
   float: right;
   ul {
@@ -130,7 +159,8 @@ nav {
     li {
       float: left;
       position: relative;
-      a {
+      a,
+      a:visited {
         display: block;
         padding: 0 20px;
         line-height: $nav-height;
@@ -142,28 +172,32 @@ nav {
           color: $nav-font-color;
         }
         &:not(:only-child):after {
-        padding-left: 4px;
-        content: ' ▾';
+          padding-left: 4px;
+          content: ' ▾';
         }
-      }
+      } // Dropdown list
       ul li {
         min-width: 190px;
-        & a {
+        a {
           padding: 15px;
           line-height: 20px;
-          z-index: 1;
         }
       }
     }
   }
 }
 
+// Dropdown list binds to JS toggle event
 .nav-dropdown {
   position: absolute;
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
 .nav-mobile {
   display: none;
   position: absolute;
@@ -173,7 +207,37 @@ nav {
   height: $nav-height;
   width: $nav-height;
 }
-
+@media only screen and (max-width: $breakpoint) {
+  // Hamburger nav visible on mobile only
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+   width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -211,62 +275,5 @@ nav {
     &:after {
       transform: rotate(-45deg);
     }
-  }
-}
-
-@media only screen and (max-width: $breakpoint) {
-  .nav-mobile {
-    display: block;
-  }
-   nav {
-    width: 100%;
-    padding: $nav-height 0 15px;
-    ul {
-      display: none;
-      li {
-        float: none;
-         a {
-          padding: 15px;
-          line-height: 20px;
-        }
-        ul li a {
-          padding-left: 30px;
-        }
-      }
-    }
-  }
-
- .nav-dropdown {
-   position: static;
-  }
-}
-
-@media screen and (min-width: $breakpoint) {
-  .nav-list {
-    display: block !important;
-  }
-}
-
-.navigation {
-  height: $nav-height;
-  background: $nav-background;
-}
-
-.nav-container {
-  max-width: $content-width;
-  margin: 0 auto;
-}
-
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: $nav-height;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  a,
-  a:visited {
-    color: $nav-font-color;
-    text-decoration: none;
   }
 }
