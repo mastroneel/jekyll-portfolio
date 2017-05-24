@@ -1,0 +1,29 @@
+// ******
+// COLORS
+// ******
+
+$main-color: #39707a;
+$accent-color: #37ad83;
+$font-color: #232323;
+$secondary-font-color: #fff;
+$link-color: #2f4b6b;
+$link-hover-color: lighten($link-color, 30%);
+$heading-font-color: #2f4b6b;
+
+
+// *****
+// FONTS
+// *****
+
+$main-font: 'Open Sans', sans-serif;
+$heading-font: 'Muli', sans-serif;
+
+
+// ****
+//  NAV
+// ****
+$breakpoint: 800px;
+$nav-height: 90px;
+$moile-nav-height: 60px;
+$nav-background: rgba(0, 0, 0, 0.2);
+$mobile-nav-background: #262626;

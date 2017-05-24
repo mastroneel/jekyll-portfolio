@@ -1,0 +1,29 @@
+.top-links {
+  width: 640px;
+  margin: 0 auto;
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    li {
+      padding: 10px;
+      a {
+        text-transform: uppercase;
+      }
+      span {
+        color: $link-color;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.photo-grid {
+  padding-top: 40px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  img {
+    width: 23%;
+    padding: 1px;
+  }
+}
