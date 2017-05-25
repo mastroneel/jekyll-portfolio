@@ -16,4 +16,54 @@
 	display: flex;
   width: 100%;
   overflow: hidden;
+  .hero-content {
+    width: 600px;
+    padding-left: 3rem;
+    margin-top: 50vh;
+    text-align: left;
+    line-height: 1.5em;
+    animation-name: hero;
+    animation-duration: 0.9s;
+    h1, p {
+      color: $secondary-font-color;
+    }
+    h1 {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 3.8em;
+    }
+    button {
+      font-family: $secondary-font;
+      height: 3rem;
+      width: 8rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+      background: transparent;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 0.9em;
+      margin-left: 6px;
+      transition: 0.2s ease;
+      &:hover {
+        border: 1px solid rgba(255, 255, 255, 1);
+        transition: 0.2s ease;
+      }
+    }
+    .arrow-button {
+      width: 3rem;
+    }
+  }
+}
+
+// ***********************************
+// Makes hero text fly in on page load
+// ***********************************
+
+@keyframes hero {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 50vh;
+  }
 }

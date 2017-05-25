@@ -3,27 +3,29 @@
 // ******
 
 $main-color: #39707a;
-$accent-color: #37ad83;
+$accent-color: #37ad9f;
 $font-color: #232323;
 $secondary-font-color: #fff;
 $link-color: #2f4b6b;
 $link-hover-color: lighten($link-color, 30%);
-$heading-font-color: #2f4b6b;
 
 
 // *****
 // FONTS
 // *****
 
-$main-font: 'Open Sans', sans-serif;
-$heading-font: 'Muli', sans-serif;
+// $main-font: 'Work Sans', sans-serif;
+$main-font: 'Muli', sans-serif;
+$secondary-font: 'Work Sans', sans-serif;
+$paragraph-font: 'Roboto Slab', serif;
+
 
 
 // ****
 //  NAV
 // ****
 $breakpoint: 800px;
-$nav-height: 90px;
+$nav-height: 85px;
 $moile-nav-height: 60px;
 $nav-background: rgba(0, 0, 0, 0.2);
 $mobile-nav-background: #262626;

@@ -20,8 +20,11 @@ main {
 }
 
 h1, h2, h3 {
-	color: $heading-font-color;
-	font-family: $heading-font;
+	font-family: $main-font;
+}
+
+p {
+	font-family: $paragraph-font;
 }
 
 a, a:visited {
