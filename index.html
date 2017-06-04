@@ -1,17 +1,68 @@
 ---
 layout: home
 ---
-
+<body>
 <div class="container">
+  
+  <section class="cd-hero">
+		<ul class="cd-hero-slider">
+			<li class="selected">
+				<div class="cd-full-width hero-slide-1">
+          <div class="hero-content">
+					  <h2>see the difference</h2>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nostrum, maiores vitae.</p>
+            <button href="#0">read more</button>
+					  <button href="#0" class="arrow-button"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+			</li>
 
-  <div class="hero">
-    <div class="hero-content">
-      <h1>see the difference</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nostrum, maiores vitae.</p>
-      <button href="#">Read more</button>
-      <button class="arrow-button" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-    </div>
-  </div>
+			<li>
+				<div class="cd-full-width hero-slide-2">
+          <div class="hero-content">
+					  <h2>more choices</h2>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque est.</p>
+					  <button href="#0">read more</button>
+					  <button href="#0" class="arrow-button"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+			</li>
+
+			<li class="cd-bg-video">
+				<div class="cd-full-width">
+          <div class="hero-content">
+            <h2>better results</h2>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam, eos qui voluptate nostrum modi nisi.</p>
+            <button href="#0">read more</button>
+					  <button href="#0" class="arrow-button"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+				</div>
+
+				<div class="cd-bg-video-wrapper" data-video="hero-slider/assets/video/video">
+					<!-- video element will be loaded using jQuery -->
+				</div> <!-- .cd-bg-video-wrapper -->
+			</li>
+
+		</ul> <!-- .cd-hero-slider -->
+
+		<div class="cd-slider-nav">
+			<nav>
+				<span class="cd-marker item-1"></span>
+        <div class="dotstyle dotstyle-fillin">
+  				<ul>
+  					<li class="current selected"><a href="#"></a></li>
+  					<li><a href="#"></a></li>
+  					<li><a href="#"></a></li>
+  				</ul>
+        </div>
+			</nav>
+		</div> <!-- .cd-slider-nav -->
+	</section>
+
+
+
+
+
 
   <div class="top-links">
     <ul>
@@ -41,3 +92,15 @@ layout: home
     <img src="img/image-16.jpeg"/>
   </div>
 </div>
+
+<script src="../DotNavigationStyles/js/dots.js"></script>
+		<script>
+			[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+				new DotNav( nav, {
+					callback : function( idx ) {
+						//console.log( idx )
+					}
+				} );
+			} );
+		</script>
+</body>

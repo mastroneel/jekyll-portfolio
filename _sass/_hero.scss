@@ -1,7 +1,80 @@
-.hero {
-	margin: 0;
-	padding: 0;
-  background:
+
+.cd-hero {
+	.cd-full-width {
+		.hero-content {
+			float: left;
+			text-align: left;
+			width: 50%;
+			margin-left: -3%;
+			margin-top: 5%;
+			animation-name: hero;
+    	animation-duration: 0.7s;
+			h2, p {
+				color: $secondary-font-color;
+			}
+			h2 {
+				font-family: 'Titillium Web', sans-serif;
+				font-size: 5.5em;
+			}
+			p {
+				font-size: 1.1em;
+			}
+		}
+		button {
+			font-family: $secondary-font;
+      height: 3rem;
+      width: 8rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+      background: transparent;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 0.9em;
+      margin-left: 100px;
+      transition: 0.2s ease;
+      &:hover {
+        border: 1px solid rgba(255, 255, 255, 1);
+        transition: 0.2s ease;
+      }
+		}
+		.arrow-button {
+      width: 3rem;
+			margin-left: 6px;
+    }
+	}
+	.cd-slider-nav {
+		background: transparent;
+		.cd-marker {
+			opacity: 0;
+		}
+		nav {
+			margin-right: -85%;
+			margin-top: -3%;
+			ul {
+				li {
+					width: 20px;
+					height: 20px;
+					margin: 5px;
+					overflow: hidden;
+					a {
+						background: transparent;
+						padding-top: 0;
+						&:hover {
+							background: transparent;
+						}
+					}
+					&.selected {
+						background: transparent;
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hero-slide-1 {
+	background:
       -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
       url("../img/hero-image-1.jpeg");
   background:
@@ -11,47 +84,23 @@
       linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
       url("../img/hero-image-1.jpeg");
   background-size: cover;
-	text-align: center;
-	height: 93vh;
-	display: flex;
-  width: 100%;
-  overflow: hidden;
-  .hero-content {
-    width: 600px;
-    padding-left: 3rem;
-    margin-top: 50vh;
-    text-align: left;
-    line-height: 1.5em;
-    animation-name: hero;
-    animation-duration: 0.9s;
-    h1, p {
-      color: $secondary-font-color;
-    }
-    h1 {
-      font-family: 'Titillium Web', sans-serif;
-      font-size: 3.8em;
-    }
-    button {
-      font-family: $secondary-font;
-      height: 3rem;
-      width: 8rem;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 2px;
-      background: transparent;
-      text-transform: uppercase;
-      color: #fff;
-      font-size: 0.9em;
-      margin-left: 6px;
-      transition: 0.2s ease;
-      &:hover {
-        border: 1px solid rgba(255, 255, 255, 1);
-        transition: 0.2s ease;
-      }
-    }
-    .arrow-button {
-      width: 3rem;
-    }
-  }
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.hero-slide-2 {
+	background:
+      -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+      url("../img/hero-image-3.jpeg");
+  background:
+      -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+      url("../img/hero-image-3.jpeg");
+  background:
+      linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+      url("../img/hero-image-3.jpeg");
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 // ***********************************
@@ -60,10 +109,9 @@
 
 @keyframes hero {
   from {
-    margin-top: 100%;
-  }
-
-  to {
-    margin-top: 50vh;
-  }
+		margin-top: 100%;
+	}
+	to {
+		margin-top: 5%;
+	}
 }

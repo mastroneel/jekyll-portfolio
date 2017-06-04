@@ -5,10 +5,21 @@
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../hero-slider/css/style.css">
+	<link rel="stylesheet" href="../hero-slider/css/reset.css">
+	<link rel="stylesheet" href="../DotNavigationStyles/css/normalize.css">
+	<link rel="stylesheet" href="../DotNavigationStyles/css/demo.css">
+	<link rel="stylesheet" href="../DotNavigationStyles/css/component.css">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/nav.js"></script>
+	<script src="../hero-slider/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="../hero-slider/js/main.js"></script>
+	<script type="text/javascript" src="../hero-slider/js/modernizr.js"></script>
+	<script src="../DotNavigationStyles/js/dots.js"></script>
+	<script src="../DotNavigationStyles/js/modernizr.min.js"></script>
+
 </head>

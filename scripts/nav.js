@@ -1,19 +1,11 @@
-// *********************
-// Nav dropdown + toggle
-// *********************
+// *******************
+// Mobile nav dropdown
+// *******************
 
 (function($) {
   $(function() {
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
     $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
+      $('.nav-mobile-list').slideToggle();
     });
     $('#nav-toggle').click(function() {
       this.classList.toggle('active');
@@ -22,21 +14,22 @@
 })(jQuery);
 
 
-// ********************
-// Shrink nav on scroll
-// ********************
+// ************************
+// Shrink nav and change
+// content/colors on scroll
+// ************************
 
 $(function(){
-    $('.navigation').data('size','big');
+    $('.nav-desktop').data('size','big');
 });
 
 $(window).scroll(function(){
     if($(document).scrollTop() > 0)
     {
-        if($('.navigation').data('size') == 'big')
+        if($('.nav-desktop').data('size') == 'big')
         {
-            $('.navigation').data('size','small');
-            $('.navigation').stop().animate({
+            $('.nav-desktop').data('size','small');
+            $('.nav-desktop').stop().animate({
                 height: '55px',
                 lineHeight: '35px'
             },100);
@@ -44,56 +37,35 @@ $(window).scroll(function(){
               lineHeight: '55px'
             });
             $('.logo a').css({
-              color: '#262626',
-              fontSize: '30px',
+              color: '#262626'
             });
-            $('.navigation').css('background-color', 'rgba(255, 255, 255, 1)');
-            $('nav ul li a').css('color', '#262626');
+            $('.logo a').stop().animate({
+              fontSize: '30px'
+            });
+            $('.nav-desktop').css('background-color', 'rgba(255, 255, 255, 1)');
+            $('.nav-desktop ul li a').css('color', '#262626');
         }
     }
     else
     {
-        if($('.navigation').data('size') == 'small')
+        if($('.nav-desktop').data('size') == 'small')
         {
-            $('.navigation').data('size','big');
-            $('.navigation').stop().animate({
+            $('.nav-desktop').data('size','big');
+            $('.nav-desktop').stop().animate({
                 height: '85px',
                 lineHeight: '85px'
-            },100);
-            $('.nav-list').css({
+            }, 100);
+            $('.nav-desktop ul').css({
               lineHeight: '85px'
             }, 100);
             $('.logo a').css({
               color: '#fff',
-              fontSize: '50px'
             }, 100);
-            $('.navigation').css({backgroundColor: 'rgba(0, 0, 0, 0.2)'}, 100);
-            $('nav ul li a').css({color: '#fff'}, 100);
+            $('.logo a').stop().animate({
+              fontSize: '50px'
+            });
+            $('.nav-desktop').css({backgroundColor: 'rgba(0, 0, 0, 0.2)'}, 100);
+            $('.nav-desktop ul li a').css({color: '#fff'}, 100);
         }
     }
 });
-
-
-// $(document).ready(function(){
-//             var scroll_pos = 0;
-//             $(document).scroll(function() {
-//                 scroll_pos = $(this).scrollTop();
-//                 if(scroll_pos > 2) {
-//                     $('.navigation').css('background-color', 'rgba(255, 255, 255, 1)');
-//                     $('nav ul li a').css('color', '#262626');
-//                     $('nav ul li a:visited').css('color', '#262626');
-//                     // $('.logo a').css({
-//                     //   color: '#262626',
-//                     //   fontSize: '30px',
-//                     // });
-//                 } else {
-//                     $('.navigation').css('background-color', 'rgba(0, 0, 0, 0.2)');
-//                     $('nav ul li a').css('color', '#fff');
-//                     $('nav ul li a:visited').css('color', '#fff');
-//                     // $('.logo a').css({
-//                     //   color: '#fff',
-//                     //   fontSize: '50px'
-//                     // });
-//                 }
-//             });
-//         });
